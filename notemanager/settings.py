@@ -41,7 +41,7 @@ INSTALLED_APPS = [
 
 INSTALLED_APPS += [
     'rest_framework',
-    # 'notes',
+    'notes',
     'accounts.apps.AccountsConfig',
 ]
 

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Детали заметки{% endblock %}
+
+{% block content %}
+    <h2>{{ note.title }}</h2>
+    <p>{{ note.description }}</p>
+
+    <p class="date">
+        Published (modified) {{ note.updated_at }} by {{ note.user }}
+    </p>
+    {{ post.body|linebreaks }}
+
+{% endblock %}

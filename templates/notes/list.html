@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Список заметок{% endblock %}
+
+{% block content %}
+    <h2>Заметки</h2>
+    <ul>
+
+        {% for note in notes %}
+            <h2>
+                <a href="{% url 'notes:note_item' note.id %}"> {{ note.title }}</a>
+            </h2>
+            <p class="date">
+                Published (modified) {{ note.updated_at }} by {{ note.user }}
+            </p>
+            {{ note.description|truncatewords:20|linebreaks }}
+        {% endfor %}
+        {% include "pagination.html" with page=notes %}
+    </ul>
+{% endblock %}
