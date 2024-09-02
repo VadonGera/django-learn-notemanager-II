@@ -46,6 +46,10 @@ INSTALLED_APPS += [
     'accounts.apps.AccountsConfig',
 ]
 
+INSTALLED_APPS += [
+    'drf_yasg',
+]
+
 AUTH_USER_MODEL = 'accounts.User'
 
 REST_FRAMEWORK = {

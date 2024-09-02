@@ -18,6 +18,8 @@ class NoteModelTest(TestCase):
             password='123456',
             first_name='first_name',
             last_name='last_name',
+            is_admin=False,
+            is_active=False,
         )
         self.note = Note.objects.create(
             title='Test Note',
